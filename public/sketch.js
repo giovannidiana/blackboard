@@ -4,7 +4,8 @@ let drawing=false;
 let sc,sw;
 
 function setup(){
-  socket = io.connect("http://localhost:3000");
+  //socket = io.connect("http://localhost:3000");
+  socket = io();
   socket.on('mousePressed',newDrawing);
   frameRate(500);
   createCanvas(200,200);

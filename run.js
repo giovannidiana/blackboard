@@ -1,7 +1,9 @@
 var express = require("express");
 var socket = require("socket.io");
 var app = express();
-var server = app.listen(3000);
+const PORT = process.env.PORT || 3000;
+
+var server = app.listen(PORT);
 const io = socket(server)
 
 app.use(express.static("public"))
